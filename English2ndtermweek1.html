@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 1 Reviewer — Academic vs Non-Academic Texts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="English2ndtermweek1.css">
+<script src="English2ndtermweek1.js" defer></script>
+</head>
+<body>
+
+<div class="bg-video-overlay" aria-hidden="true"></div>
+
+<div class="reading-progress" aria-hidden="true">
+  <div class="reading-progress-fill" id="readingProgress"></div>
+</div>
+
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="eyebrow">Effective Communication &middot; Quarter 1 &middot; Week 1</div>
+    <h1>Academic vs. Non-Academic Texts</h1>
+    <p class="tagline">Made by Christian</p>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab is-active" data-tab="learn" role="tab">Study Notes</button>
+      <button class="tab" data-tab="quiz" role="tab">Practice Quiz</button>
+      <button class="tab" data-tab="cheat" role="tab">Simple Explanations</button>
+      <button class="tab" data-tab="glossary" role="tab">Glossary</button>
+      <button class="tab" data-tab="videos" role="tab">Video Lessons</button>
+      <button class="tab" data-tab="sources" role="tab">Sources</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- STUDY NOTES -->
+  <section class="panel is-active" id="learn" role="tabpanel">
+    <div class="deck">
+      <div class="deck-progress">
+        <span class="deck-counter">Slide <span id="slideNum">1</span> of <span id="slideTotal">16</span></span>
+        <div class="deck-dots" id="deckDots"></div>
+      </div>
+
+      <div class="deck-stage" id="deckStage">
+
+        <article class="slide">
+          <div class="card intro-letter">
+            <div class="letter-stamp">Week 1</div>
+            <h2 class="letter-title">A short note before we begin</h2>
+            <p class="letter-greeting">Dear student,</p>
+            <p>
+              Welcome to Week 1 of Effective Communication. This is the week where you
+              meet one of the most fundamental concepts in writing &mdash;
+              understanding the difference between <strong>Academic</strong> and
+              <strong>Non-Academic texts</strong>. It has a long name, but the
+              idea behind it is something you have already lived your whole life.
+            </p>
+            <p>
+              Think about the last time you read a textbook versus a text message from a friend.
+              You did not read them the same way. The textbook required focus, analysis,
+              and a formal understanding. The text message was casual, quick, and personal.
+              The writer did not do complicated math in their head. They simply knew two
+              rules: one for formal writing, one for casual writing. Whichever rule
+              matched the situation, that was the style.
+            </p>
+            <p>
+              That is the essence of Academic vs. Non-Academic texts. It is one topic,
+              but it carries more than one rule. The rule you use depends on the
+              <strong>purpose</strong> and the <strong>audience</strong> you are writing for.
+            </p>
+            <p>
+              We will explore essays, poetry, novels, short stories, research papers, and even
+              social media posts. By the time you finish, distinguishing between these two types
+              of texts will not feel like a new topic. It will feel like a superpower &mdash; a way
+              of communicating effectively in school, work, and everyday life.
+            </p>
+            <p class="letter-sign">Let us begin.<br>&mdash; Your Week 1 reviewer</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="card card-violet">
+            <h2>What is an Academic Text?</h2>
+            <p>An <strong>academic text</strong> is a formal, evidence-based mode of writing used in educational and professional contexts to explain, analyze, argue, or report research.</p>
+            <div class="callout callout-violet">
+              <span class="callout-label">Key Characteristics</span>
+              <ul>
+                <li><strong>Purpose:</strong> Inform, analyze, argue, or contribute new knowledge.</li>
+                <li><strong>Audience:</strong> Scholars, professionals, students.</li>
+                <li><strong>Language:</strong> Formal, precise, technical, objective.</li>
+                <li><strong>Structure:</strong> Rigid (Introduction, Methodology, Results, Discussion, Conclusion).</li>
+                <li><strong>Evidence:</strong> Citations, data, peer-reviewed sources.</li>
+              </ul>
+            </div>
+            <p>Examples include essays, research papers, dissertations, and journal articles. These texts are designed to be read critically and analytically.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="card card-teal">
+            <h2>What is a Non-Academic Text?</h2>
+            <p>A <strong>non-academic text</strong> is a more informal, audience-focused mode of writing used to entertain, persuade, inform casually, or share personal experience.</p>
+            <div class="callout callout-pink">
+              <span class="callout-label">Key Characteristics</span>
+              <ul>
+                <li><strong>Purpose:</strong> Entertain, persuade, engage, share personal experience.</li>
+                <li><strong>Audience:</strong> General public, peers.</li>
+                <li><strong>Language:</strong> Informal, conversational, emotional, figurative.</li>
+                <li><strong>Structure:</strong> Flexible (Chapters, stanzas, short paragraphs, dialogue).</li>
+                <li><strong>Evidence:</strong> Personal anecdotes, emotional appeals, general observations.</li>
+              </ul>
+            </div>
+            <p>Examples include blogs, social media posts, novels, short stories, and poems. These texts are designed to be read for enjoyment or casual information.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="card card-blue">
+            <h2>Comparison: Audience & Purpose</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Academic Text</th>
+                        <th>Non-Academic Text</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Audience</strong></td>
+                        <td>Academic researchers, students and professionals</td>
+                        <td>General audiences with varying levels of knowledge</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Purpose/Function</strong></td>
+                        <td>Inform, argue or contribute new knowledge</td>
+                        <td>Entertain, persuade or engage</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>The intended audience heavily dictates the purpose. If you are writing for a professor, your purpose is to demonstrate knowledge and analysis. If you are writing for a social media follower, your purpose is to capture attention and entertain.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="card card-amber">
+            <h2>Comparison: Structure & Language</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Academic Text</th>
+                        <th>Non-Academic Text</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Structure</strong></td>
+                        <td>Introduction, body, methodology, discussion, conclusion, references</td>
+                        <td>Flexible, depending on the format</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Language</strong></td>
+                        <td>Formal, precise, technical, objective</td>
+                        <td>Informal, conversational, emotional</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Academic texts follow a rigid, predictable structure. Non-academic texts break the rules &mdash; a poem uses stanzas, a blog post uses short paragraphs, and a novel uses chapters. The language shifts from objective analysis to emotional connection.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="card card-emerald">
+            <h2>Deep Dive: Academic Essays</h2>
+            <p>An <strong>academic essay</strong> is a formal piece of writing that presents an argument or analysis on a specific topic.</p>
+            <ul>
+                <li><strong>Structure:</strong> Introduction (with thesis statement), Body paragraphs (each with a topic sentence and evidence), Conclusion.</li>
+                <li><strong>Language:</strong> Formal, objective, and precise. Avoids contractions (e.g., "do not" instead of "don't") and slang.</li>
+                <li><strong>Purpose:</strong> To persuade the reader through logical reasoning and evidence, not emotional manipulation.</li>
+            </ul>
+            <div class="callout callout-amber">
+              <span class="callout-label">Example Topic</span>
+              "The Impact of Social Media on Student Productivity" &mdash; This would require citing studies, analyzing data, and presenting a balanced argument.
+            </div>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="card card-pink">
+            <h2>Deep Dive: Poetry & Creative Writing</h2>
+            <p><strong>Poetry</strong> is a form of non-academic literature that uses aesthetic and rhythmic qualities of language to evoke meaning.</p>
+            <ul>
+                <li><strong>Structure:</strong> Lines, stanzas, and sometimes rhyme schemes. Free verse has no strict rules.</li>
+                <li><strong>Language:</strong> Highly figurative, using metaphors, similes, and imagery. Economy of language is key.</li>
+                <li><strong>Purpose:</strong> To evoke emotion, tell a story, or express an idea creatively.</li>
+            </ul>
+            <div class="callout callout-pink">
+              <span class="callout-label">Example</span>
+              "The sky wept with me." &mdash; This uses personification (giving human traits to the sky) to convey sadness. An academic text would say "It rained heavily while I was sad."
+            </div>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="card card-violet">
+            <h2>Deep Dive: Novels & Short Stories</h2>
+            <p><strong>Novels and short stories</strong> are extended fictional narratives that explore characters, plot, and themes.</p>
+            <ul>
+                <li><strong>Structure:</strong> Chapters (novels) or scenes (short stories), plot development, and varied pacing.</li>
+                <li><strong>Language:</strong> Lyrical, conversational, or descriptive. Dialogue is used to reveal character.</li>
+                <li><strong>Purpose:</strong> To entertain, explore the human condition, and provide an immersive experience.</li>
+            </ul>
+            <p>Unlike academic texts, which prioritize facts and logic, novels prioritize narrative and emotional resonance.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="card card-blue">
+            <h2>Analyzing Excerpt 1: Social Media</h2>
+            <p><strong>Topic:</strong> The Impact of Social Media on Student Productivity</p>
+            <p><strong>Text:</strong> "Social media platforms have become integral to the daily lives of students, influencing both academic performance and social interactions (Edutopia, 2019). Recent studies indicate that excessive use of social networking sites can lead to reduced concentration and lower academic achievement. However, when used responsibly, these platforms can facilitate collaborative learning, peer support, and access to educational resources."</p>
+            <hr>
+            <p><strong>Analysis:</strong> This is an <strong>Academic Text</strong>. Notice the formal tone, the citation (Edutopia, 2019), the use of words like "integral," "facilitate," and "collaborative." The purpose is to inform and analyze based on evidence. The intended audience is scholars or educators.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="card card-pink">
+            <h2>Analyzing Excerpt 2: Personal Blog</h2>
+            <p><strong>Topic:</strong> Why I Can't Stop Scrolling</p>
+            <p><strong>Text:</strong> "Honestly, I spend way too much time on social media. One minute I'm checking a friend's post, and the next thing I know, an hour has passed. It's fun though &mdash; I get to laugh at memes, watch videos, and chat with people. Sometimes I even find cool study tips or motivational quotes that help me out. Still, I know it distracts me from schoolwork..."</p>
+            <hr>
+            <p><strong>Analysis:</strong> This is a <strong>Non-Academic Text</strong>. The use of "I," "Honestly," and "way too much" creates a conversational, emotional tone. The purpose is to share a personal experience and entertain. The intended audience is peers or the general public.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="card card-emerald">
+            <h2>How Purpose and Audience Shape the Text</h2>
+            <p>Understanding the difference is crucial for effective communication. When you know <em>who</em> you are writing for and <em>why</em>, you automatically adjust:</p>
+            <ul>
+                <li><strong>Tone:</strong> Formal vs. Casual</li>
+                <li><strong>Vocabulary:</strong> Technical jargon vs. Everyday language</li>
+                <li><strong>Structure:</strong> Rigid methodology vs. Flexible narrative</li>
+                <li><strong>Evidence:</strong> Citations and data vs. Personal anecdotes</li>
+            </ul>
+            <p>If you write a formal academic essay using "Honestly, I think..." and memes, you will fail to meet the expectations of your professor. If you write a casual blog post full of citations and technical jargon, your readers will lose interest.</p>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="card card-amber">
+            <h2>Guide Questions for Analysis</h2>
+            <p>When you are given a text to analyze, ask yourself these questions to determine if it is Academic or Non-Academic:</p>
+            <ol class="steps">
+                <li>What is the text all about? (Topic)</li>
+                <li>Is there a difference in the writing style? (Formal vs. Informal)</li>
+                <li>How do the purpose and the intended readers shape the way the text is written?</li>
+                <li>How do you define academic and non-academic texts through their purposes and audiences?</li>
+                <li>Does the text use citations and data, or personal anecdotes and emotions?</li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="card card-blue">
+            <h2>Examples of Academic Texts</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Example</th>
+                        <th>Content</th>
+                        <th>Structure</th>
+                        <th>Language</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Essay</strong></td>
+                        <td>Argumentative or analytical claims supported by evidence.</td>
+                        <td>Introduction, thesis, body, conclusion</td>
+                        <td>Formal, precise, used disciplined vocabulary</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Research Paper</strong></td>
+                        <td>Original study or systematic review of data and citations.</td>
+                        <td>Abstract, introduction, methods, results, discussion, references</td>
+                        <td>Objective, technical</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Book Review</strong></td>
+                        <td>Critical evaluation of scholarly or literary work with supporting evidence.</td>
+                        <td>Summary, critique, evaluation, conclusion, bibliographic details</td>
+                        <td>Analytical, evaluative, formal tone</td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="card card-teal">
+            <h2>Examples of Non-Academic Texts</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Example</th>
+                        <th>Content</th>
+                        <th>Structure</th>
+                        <th>Language</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Short Story</strong></td>
+                        <td>Fictional narrative focused on characters, plot, and theme.</td>
+                        <td>Flexible narrative; scenes and dialogue; variable length</td>
+                        <td>Descriptive, figurative, voice driven</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Novel</strong></td>
+                        <td>Extended fictional work exploring characters.</td>
+                        <td>Chapters, plot development, and varied pacing</td>
+                        <td>Lyrical or conversational; stylistic variety</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Poetry</strong></td>
+                        <td>Condensed; image-rich; exploring idea</td>
+                        <td>Lines and stanzas; forms vary (free verse, sonnet, etc.)</td>
+                        <td>Figurative, rhythmic, economy of language</td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="card card-violet">
+            <h2>Key Takeaways</h2>
+            <p>Academic and non-academic texts serve different purposes and audiences. Understanding those differences helps students read more critically, choose the right tone and structure, and write more effectively for school, work, and everyday life.</p>
+            <div class="callout callout-amber">
+              <span class="callout-label">Remember</span>
+              <ul>
+                <li><strong>Academic:</strong> Formal, evidence-based, objective, structured.</li>
+                <li><strong>Non-Academic:</strong> Informal, audience-focused, emotional, flexible.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="deck-controls">
+        <button class="deck-btn" id="prevSlide" type="button" aria-label="Previous slide">
+          <span aria-hidden="true">&larr;</span> Previous
+        </button>
+        <button class="deck-btn primary" id="nextSlide" type="button" aria-label="Next slide">
+          Next <span aria-hidden="true">&rarr;</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="panel" id="quiz" role="tabpanel">
+    <div id="quizArea">
+      <div class="quiz-toolbar">
+        <div class="quiz-meta">
+          <div class="pill pill-violet">Question <span id="qNum">1</span> of 50</div>
+          <div class="pill pill-amber">Streak <span id="streak">0</span></div>
+          <div class="pill pill-teal">Score <span id="score">0</span></div>
+        </div>
+        <button class="shuffle-btn" id="shuffleBtn" type="button">
+          <span class="shuffle-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 3 21 3 21 8"></polyline>
+              <line x1="4" y1="20" x2="21" y2="3"></line>
+              <polyline points="21 16 21 21 16 21"></polyline>
+              <line x1="15" y1="15" x2="21" y2="21"></line>
+              <line x1="4" y1="4" x2="9" y2="9"></line>
+            </svg>
+          </span>
+          Shuffle questions
+        </button>
+      </div>
+
+      <div class="progress"><div class="progress-fill" id="barFill"></div></div>
+
+      <div class="q-card" id="questionCard">
+        <div class="q-tag" id="qTag">Concept</div>
+        <div class="q-text" id="qText"></div>
+        <div class="options" id="options"></div>
+        <div class="explain" id="explain">
+          <div class="explain-head" id="explainHead"></div>
+          <div class="explain-body" id="explainBody"></div>
+        </div>
+        <div class="next-wrap" id="nextWrap">
+          <button class="btn" id="nextBtn">Next question</button>
+        </div>
+      </div>
+    </div>
+    <div id="resultArea" hidden></div>
+  </section>
+
+  <!-- SIMPLE EXPLANATIONS -->
+  <section class="panel" id="cheat" role="tabpanel">
+    <article class="card card-violet">
+      <h2>Simple Explanations</h2>
+      <p>Core concepts broken down into easy-to-understand comparisons.</p>
+    </article>
+    <div id="cheatSheet"></div>
+  </section>
+
+  <!-- GLOSSARY -->
+  <section class="panel" id="glossary" role="tabpanel">
+    <article class="card card-teal">
+      <h2>English &mdash; Filipino Glossary</h2>
+      <p>Key terms used in this reviewer, with their Filipino translations.</p>
+    </article>
+    <div id="glossaryList"></div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section class="panel" id="videos" role="tabpanel">
+    <article class="card card-pink">
+      <h2>Video Lessons</h2>
+      <p>Curated videos to help you master Academic and Non-Academic writing.</p>
+    </article>
+    <div id="videoList"></div>
+  </section>
+
+  <!-- SOURCES -->
+  <section class="panel" id="sources" role="tabpanel">
+    <article class="card card-emerald">
+      <h2>Source Materials</h2>
+      <p>Click on any image to zoom in and view the original screenshots. Replace these placeholders with your 24 actual screenshots by updating the <code>src</code> attributes below.</p>
+    </article>
+    <div class="sources-grid" id="sourcesGrid">
+      <!-- Replace the src paths below with your actual image file names (e.g., "screenshot1.png") -->
+      <img src="Academicvsnonacademic.png" alt="Source Screenshot 1" class="source-img">
+      <img src="1.png" alt="Source Screenshot 2" class="source-img">
+      <img src="2.png" alt="Source Screenshot 3" class="source-img">
+      <img src="3.png" alt="Source Screenshot 4" class="source-img">
+      <img src="4.png" alt="Source Screenshot 5" class="source-img">
+      <img src="5.png" alt="Source Screenshot 6" class="source-img">
+      <img src="6.png" alt="Source Screenshot 7" class="source-img">
+      <img src="7.png" alt="Source Screenshot 8" class="source-img">
+      <img src="8.png" alt="Source Screenshot 9" class="source-img">
+      <img src="9.png" alt="Source Screenshot 10" class="source-img">
+      <img src="10.png" alt="Source Screenshot 11" class="source-img">
+      <img src="11.png" alt="Source Screenshot 12" class="source-img">
+      <img src="12.png" alt="Source Screenshot 13" class="source-img">
+      <img src="13.png" alt="Source Screenshot 14" class="source-img">
+      <img src="14.png" alt="Source Screenshot 15" class="source-img">
+      <img src="15.png" alt="Source Screenshot 16" class="source-img">
+      <img src="16.png" alt="Source Screenshot 17" class="source-img">
+      <img src="17.png" alt="Source Screenshot 18" class="source-img">
+      <img src="18.png" alt="Source Screenshot 19" class="source-img">
+      <img src="19.png" alt="Source Screenshot 20" class="source-img">
+      <img src="20.png" alt="Source Screenshot 21" class="source-img">
+      <img src="21.png" alt="Source Screenshot 22" class="source-img">
+      <img src="22.png" alt="Source Screenshot 23" class="source-img">
+      <img src="23.png" alt="Source Screenshot 24" class="source-img">
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Week 1 English reviewer built for Effective Communication on Academic vs. Non-Academic Texts.</p>
+  </div>
+</footer>
+
+<button class="sound-toggle" id="muteBtn" aria-label="Toggle sound">Sound: on</button>
+
+<!-- Zoom Modal -->
+<div class="zoom-modal" id="zoomModal">
+  <button class="zoom-close" id="zoomClose" aria-label="Close zoom">&times;</button>
+  <img src="" alt="Zoomed Source" id="zoomImg">
+</div>
+
+</body>
+</html>
