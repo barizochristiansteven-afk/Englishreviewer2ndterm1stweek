@@ -12,6 +12,10 @@
 </head>
 <body>
 
+<!-- Background video -->
+<video class="bg-video" autoplay muted loop playsinline preload="auto">
+  <source src="Background1.mp4" type="video/mp4">
+</video>
 <div class="bg-video-overlay" aria-hidden="true"></div>
 
 <div class="reading-progress" aria-hidden="true">
@@ -440,34 +444,37 @@
   <section class="panel" id="sources" role="tabpanel">
     <article class="card card-emerald">
       <h2>Source Materials</h2>
-      <p>Raw sources where the info came from</p>
+      <p>Swipe left or right to browse through the screenshots. Click on any image to zoom in.</p>
     </article>
-    <div class="sources-grid" id="sourcesGrid">
-      <!-- Replace the src paths below with your actual image file names (e.g., "screenshot1.png") -->
-      <img src="Academicvsnonacademic.png" alt="Source Screenshot 1" class="source-img">
-      <img src="1.png" alt="Source Screenshot 2" class="source-img">
-      <img src="2.png" alt="Source Screenshot 3" class="source-img">
-      <img src="3.png" alt="Source Screenshot 4" class="source-img">
-      <img src="4.png" alt="Source Screenshot 5" class="source-img">
-      <img src="5.png" alt="Source Screenshot 6" class="source-img">
-      <img src="6.png" alt="Source Screenshot 7" class="source-img">
-      <img src="7.png" alt="Source Screenshot 8" class="source-img">
-      <img src="8.png" alt="Source Screenshot 9" class="source-img">
-      <img src="9.png" alt="Source Screenshot 10" class="source-img">
-      <img src="10.png" alt="Source Screenshot 11" class="source-img">
-      <img src="11.png" alt="Source Screenshot 12" class="source-img">
-      <img src="12.png" alt="Source Screenshot 13" class="source-img">
-      <img src="13.png" alt="Source Screenshot 14" class="source-img">
-      <img src="14.png" alt="Source Screenshot 15" class="source-img">
-      <img src="15.png" alt="Source Screenshot 16" class="source-img">
-      <img src="16.png" alt="Source Screenshot 17" class="source-img">
-      <img src="17.png" alt="Source Screenshot 18" class="source-img">
-      <img src="18.png" alt="Source Screenshot 19" class="source-img">
-      <img src="19.png" alt="Source Screenshot 20" class="source-img">
-      <img src="20.png" alt="Source Screenshot 21" class="source-img">
-      <img src="21.png" alt="Source Screenshot 22" class="source-img">
-      <img src="22.png" alt="Source Screenshot 23" class="source-img">
-      <img src="23.png" alt="Source Screenshot 24" class="source-img">
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
+      <div class="sources-carousel" id="sourcesCarousel">
+        <img src="Academicvsnonacademic.png" alt="Source Screenshot 1" class="source-img">
+        <img src="1.png" alt="Source Screenshot 2" class="source-img">
+        <img src="2.png" alt="Source Screenshot 3" class="source-img">
+        <img src="3.png" alt="Source Screenshot 4" class="source-img">
+        <img src="4.png" alt="Source Screenshot 5" class="source-img">
+        <img src="5.png" alt="Source Screenshot 6" class="source-img">
+        <img src="6.png" alt="Source Screenshot 7" class="source-img">
+        <img src="7.png" alt="Source Screenshot 8" class="source-img">
+        <img src="8.png" alt="Source Screenshot 9" class="source-img">
+        <img src="9.png" alt="Source Screenshot 10" class="source-img">
+        <img src="10.png" alt="Source Screenshot 11" class="source-img">
+        <img src="11.png" alt="Source Screenshot 12" class="source-img">
+        <img src="12.png" alt="Source Screenshot 13" class="source-img">
+        <img src="13.png" alt="Source Screenshot 14" class="source-img">
+        <img src="14.png" alt="Source Screenshot 15" class="source-img">
+        <img src="15.png" alt="Source Screenshot 16" class="source-img">
+        <img src="16.png" alt="Source Screenshot 17" class="source-img">
+        <img src="17.png" alt="Source Screenshot 18" class="source-img">
+        <img src="18.png" alt="Source Screenshot 19" class="source-img">
+        <img src="19.png" alt="Source Screenshot 20" class="source-img">
+        <img src="20.png" alt="Source Screenshot 21" class="source-img">
+        <img src="21.png" alt="Source Screenshot 22" class="source-img">
+        <img src="22.png" alt="Source Screenshot 23" class="source-img">
+        <img src="23.png" alt="Source Screenshot 24" class="source-img">
+      </div>
+      <button class="carousel-btn next" onclick="scrollCarousel(1)">&#10095;</button>
     </div>
   </section>
 
@@ -484,7 +491,9 @@
 <!-- Zoom Modal -->
 <div class="zoom-modal" id="zoomModal">
   <button class="zoom-close" id="zoomClose" aria-label="Close zoom">&times;</button>
+  <button class="zoom-nav prev" id="zoomPrev">&#10094;</button>
   <img src="" alt="Zoomed Source" id="zoomImg">
+  <button class="zoom-nav next" id="zoomNext">&#10095;</button>
 </div>
 
 </body>
