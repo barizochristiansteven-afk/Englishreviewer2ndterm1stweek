@@ -768,37 +768,78 @@ document.addEventListener("DOMContentLoaded", () => {
     videoList.appendChild(div);
   });
 
-  /* Zoom Modal Functionality (Attach to hardcoded images) */
+  /* ============================================================
+     Sources Carousel & Zoom Modal Functionality
+     ============================================================ */
+  
+  // Carousel Button Scrolling
+  function scrollCarousel(direction) {
+    const container = document.getElementById('sourcesCarousel');
+    const scrollAmount = container.clientWidth * 0.8;
+    container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  }
+
+  // Zoom Modal Logic
   const zoomModal = document.getElementById("zoomModal");
   const zoomImg = document.getElementById("zoomImg");
   const zoomClose = document.getElementById("zoomClose");
+  const zoomPrev = document.getElementById("zoomPrev");
+  const zoomNext = document.getElementById("zoomNext");
   
-  // Select all hardcoded images in the sources grid
-  const sourceImages = document.querySelectorAll(".source-img");
-  
-  sourceImages.forEach(img => {
+  const sourceImages = Array.from(document.querySelectorAll(".source-img"));
+  let currentZoomIndex = 0;
+
+  sourceImages.forEach((img, index) => {
     img.addEventListener("click", () => {
-      zoomImg.src = img.src;
-      zoomImg.alt = img.alt;
-      zoomModal.classList.add("active");
+      currentZoomIndex = index;
+      openZoom();
     });
   });
 
+  function openZoom() {
+    const img = sourceImages[currentZoomIndex];
+    zoomImg.src = img.src;
+    zoomImg.alt = img.alt;
+    zoomModal.classList.add("active");
+  }
+
+  function navigateZoom(direction) {
+    currentZoomIndex = (currentZoomIndex + direction + sourceImages.length) % sourceImages.length;
+    openZoom();
+  }
+
+  if (zoomPrev) zoomPrev.addEventListener("click", () => navigateZoom(-1));
+  if (zoomNext) zoomNext.addEventListener("click", () => navigateZoom(1));
+
   function closeZoom() {
     zoomModal.classList.remove("active");
-    setTimeout(() => { zoomImg.src = ""; }, 300); // Clear src after transition
+    setTimeout(() => { zoomImg.src = ""; }, 300);
   }
 
   zoomClose.addEventListener("click", closeZoom);
   zoomModal.addEventListener("click", (e) => {
-    if (e.target === zoomModal) {
-      closeZoom();
-    }
+    if (e.target === zoomModal) closeZoom();
   });
 
+  // Swipe detection for modal
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  zoomModal.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, {passive: true});
+
+  zoomModal.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    if (touchEndX < touchStartX - 50) navigateZoom(1); // Swipe left -> next
+    if (touchEndX > touchStartX + 50) navigateZoom(-1); // Swipe right -> prev
+  }, {passive: true});
+
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && zoomModal.classList.contains("active")) {
-      closeZoom();
+    if (zoomModal.classList.contains("active")) {
+      if (e.key === "Escape") closeZoom();
+      if (e.key === "ArrowRight") navigateZoom(1);
+      if (e.key === "ArrowLeft") navigateZoom(-1);
     }
   });
 
