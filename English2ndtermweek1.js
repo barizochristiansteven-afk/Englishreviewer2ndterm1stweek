@@ -769,17 +769,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ============================================================
-     Sources Carousel & Zoom Modal Functionality
+     Sources Grid & Zoom Modal Functionality
      ============================================================ */
-  
-  // Carousel Button Scrolling
-  function scrollCarousel(direction) {
-    const container = document.getElementById('sourcesCarousel');
-    const scrollAmount = container.clientWidth * 0.8;
-    container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-  }
-
-  // Zoom Modal Logic
   const zoomModal = document.getElementById("zoomModal");
   const zoomImg = document.getElementById("zoomImg");
   const zoomClose = document.getElementById("zoomClose");
